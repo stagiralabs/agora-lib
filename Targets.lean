@@ -1,3 +1,1 @@
--- Import every target from Agora/targets
-import Targets.complexShapeEmbeddingOpBoundaryLEExact
-import Targets.complexShapeEmbeddingOpBoundaryGEExact
+-- Import every contribution from Targets
