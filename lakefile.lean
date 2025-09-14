@@ -5,8 +5,8 @@ package «agora_lib» {
   -- add any package configuration options here
 }
 
--- require mathlib from git
---   "https://github.com/leanprover-community/mathlib4.git" @ "v4.17.0"
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "v4.17.0"
 
 -- require Batteries from git
 --   "https://github.com/leanprover-community/mathlib4.git" @ "v4.17.0"
