@@ -8,8 +8,8 @@ package «agora_lib» {
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4.git" @ "v4.17.0"
 
--- require Batteries from git
---   "https://github.com/leanprover-community/mathlib4.git" @ "v4.17.0"
+-- require batteries from git
+--  "https://github.com/leanprover-community/batteries.git"
 
 require "leanprover-community" / "batteries" @ git "v4.17.0"
 
