@@ -192,7 +192,7 @@ open System
 
 /-- Parallel to compile_time_search_path% -/
 elab "compile_time_src_search_path%" : term =>
-  return toExpr (← getSrcSearchPath)
+  return toExpr (← initSrcSearchPath)
 
 def findLean (mod : Name) : IO FilePath := do
   let srcSearchPath : SearchPath := compile_time_src_search_path%
