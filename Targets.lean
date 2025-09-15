@@ -2,4 +2,5 @@
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.canonicallyorderedaddPowPoszero
+import Targets.complexshapeEmbeddingOpBoundarygeIffzero
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
