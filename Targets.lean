@@ -5,6 +5,7 @@ import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.isthetaDerivOfrealCpowConstAttopone
 import Targets.complexshapeEmbeddingOpBoundaryleIffone
+import Targets.matrixDetUpdatecolSumzero
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.derivNormOfrealCpowzero
