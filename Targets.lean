@@ -4,5 +4,6 @@ import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.complexshapeEmbeddingOpBoundaryleIffone
 import Targets.canonicallyorderedaddPowPoszero
+import Targets.derivNormOfrealCpowzero
 import Targets.complexshapeEmbeddingOpBoundarygeIffzero
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
