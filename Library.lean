@@ -1,3 +1,1 @@
 -- Import every contribution from Library
-import Library.canonicallyorderedaddPowPoszero
-import Library.canonicallyorderedaddPowPoszero_fixed
