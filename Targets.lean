@@ -2,4 +2,5 @@
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
+import Targets.setlikeIscoatomIffone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
