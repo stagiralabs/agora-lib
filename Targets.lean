@@ -1,2 +1,1 @@
--- Import every target from Agora/targets
-import Targets.example_theorem
+-- Import every contribution from Targets
