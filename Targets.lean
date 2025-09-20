@@ -1,5 +1,6 @@
 -- Import every target from Agora/targets
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
+import Targets.canonicallyorderedaddPowPoszero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setlikeIscoatomIffone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
