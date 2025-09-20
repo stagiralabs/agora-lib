@@ -4,4 +4,5 @@ import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setlikeIscoatomIffone
+import Targets.powerseriesInvonesubpowAddone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
