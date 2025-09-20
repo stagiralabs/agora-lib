@@ -13,4 +13,5 @@ import Targets.setPairwisedisjointIffone
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.setlikeIscoatomIffone
 import Targets.padicintValuationPowone
+import Targets.charactermoduleDualInjectiveIffSurjectivezero
 import Targets.padicintNormEqZpowNegValuationzero
