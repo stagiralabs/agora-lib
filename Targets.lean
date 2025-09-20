@@ -2,5 +2,6 @@
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.powerseriesInvonesubpowAddone
 import Targets.padicintNormEqZpowNegValuationzero
