@@ -9,5 +9,6 @@ import Targets.setPairwisedisjointIffone_2
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero_2
 import Targets.powerseriesInvonesubpowAddone_2
 import Targets.setlikeIscoatomIffone_2
+import Targets.canonicallyorderedaddMulPosone_2
 import Targets.canonicallyorderedaddPowPoszero_2
 import Targets.isapproximatesubgroupCardMulSelfLeone_2
