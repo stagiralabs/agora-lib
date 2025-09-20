@@ -1,5 +1,6 @@
 -- Import every target from Agora/targets
 import Targets.setlikeCovbyIffzero
+import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.matrixDetUpdatecolSumzero
 import Targets.setPairwisedisjointPairInsertzero
 import Targets.powerseriesInvonesubpowAddone
