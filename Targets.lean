@@ -5,5 +5,6 @@ import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.derivNormOfrealCpowzero
+import Targets.polynomialHilbertpolyEqZeroOfLeRootmultiplicityOneone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
 import Targets.padicintNormEqZpowNegValuationzero
