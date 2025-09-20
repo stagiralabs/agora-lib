@@ -2,4 +2,5 @@
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.derivNormOfrealCpowzero
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
