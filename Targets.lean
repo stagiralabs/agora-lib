@@ -2,3 +2,4 @@
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setlikeIscoatomIffone
+import Targets.charactermoduleDualInjectiveIffSurjectivezero
