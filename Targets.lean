@@ -9,6 +9,7 @@ import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
+import Targets.setPairwisedisjointIffone
 import Targets.derivNormOfrealCpowzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.setlikeIscoatomIffone
