@@ -12,5 +12,6 @@ import Targets.setPairwisedisjointIffone
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.setlikeIscoatomIffone
 import Targets.powerseriesInvonesubpowAddone
+import Targets.homologicalcomplexExtendhomologyisoHomNaturalityone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
 import Targets.matrixDetUpdatecolEqZeroone
