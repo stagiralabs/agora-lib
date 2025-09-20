@@ -1,6 +1,7 @@
 -- Import every target from Agora/targets
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.setPairwisedisjointIffone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
