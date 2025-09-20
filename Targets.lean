@@ -5,6 +5,7 @@ import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
+import Targets.privateZlatticeCovolumeFrontierEquivfunzero
 import Targets.setPairwisedisjointIffone
 import Targets.padicintValuationPowone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
