@@ -1,4 +1,5 @@
 -- Import every target from Agora/targets
+import Targets.homologicalcomplexQuasiisoExtendmapIffzero_2
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero_2
 import Targets.canonicallyorderedaddPowPoszero_2
 import Targets.isapproximatesubgroupCardMulSelfLeone_2
