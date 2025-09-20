@@ -1,4 +1,5 @@
 -- Import every target from Agora/targets
 import Targets.canonicallyorderedaddPowPoszero
+import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
