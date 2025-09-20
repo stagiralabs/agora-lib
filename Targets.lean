@@ -10,3 +10,4 @@ import Targets.derivNormOfrealCpowzero
 import Targets.setPairwisedisjointPairInsertzero
 import Targets.powerseriesInvonesubpowAddone
 import Targets.polynomialHilbertpolyEqZeroOfLeRootmultiplicityOneone
+import Targets.matrixDetUpdatecolEqZeroone
