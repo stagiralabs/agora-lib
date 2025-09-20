@@ -1,5 +1,6 @@
 -- Import every target from Agora/targets
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
+import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.complexshapeEmbeddingOpBoundaryleIffone
 import Targets.matrixDetUpdatecolSumzero
