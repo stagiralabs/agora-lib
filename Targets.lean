@@ -2,6 +2,7 @@
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.complexshapeEmbeddingOpBoundaryleIffone
+import Targets.matrixDetUpdatecolSumzero
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.valuationOfaddvaluationToaddvaluationone
