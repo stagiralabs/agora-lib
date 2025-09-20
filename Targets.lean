@@ -1,4 +1,5 @@
 -- Import every target from Agora/targets
+import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
 import Targets.setlikeCovbyIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.matrixDetUpdatecolSumzero
