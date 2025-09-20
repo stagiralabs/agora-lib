@@ -2,6 +2,7 @@
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
+import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
