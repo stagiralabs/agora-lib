@@ -10,5 +10,6 @@ import Targets.canonicallyorderedaddPowPoszero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setPairwisedisjointIffone
 import Targets.isapproximatesubgroupCardMulSelfLeone
+import Targets.setlikeIscoatomIffone
 import Targets.padicintValuationPowone
 import Targets.padicintNormEqZpowNegValuationzero
