@@ -4,3 +4,4 @@ import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.valuationOfaddvaluationToaddvaluationone
 import Targets.isapproximatesubgroupCardMulSelfLeone
+import Targets.charactermoduleDualInjectiveIffSurjectivezero
