@@ -3,6 +3,7 @@ import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
 import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.isthetaDerivOfrealCpowConstAttopone
 import Targets.matrixDetUpdatecolSumzero
 import Targets.setPairwisedisjointIffone
 import Targets.derivNormOfrealCpowzero
