@@ -5,6 +5,7 @@ import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.zlatticeCovolumeTendstoCardLeDivone
+import Targets.canonicallyorderedaddPowPoszero
 import Targets.privateZlatticeCovolumeFrontierEquivfunzero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.derivNormOfrealCpowzero
