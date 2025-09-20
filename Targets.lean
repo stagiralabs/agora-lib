@@ -6,3 +6,4 @@ import Targets.canonicallyorderedaddPowPoszero
 import Targets.setPairwisedisjointIffone
 import Targets.padicintValuationPowone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
+import Targets.matrixDetUpdatecolEqZeroone
