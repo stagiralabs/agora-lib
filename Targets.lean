@@ -12,6 +12,7 @@ import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setPairwisedisjointIffone
 import Targets.derivNormOfrealCpowzero
 import Targets.setPairwisedisjointPairInsertzero
+import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.setlikeIscoatomIffone
 import Targets.powerseriesInvonesubpowAddone
 import Targets.padicintValuationPowone
