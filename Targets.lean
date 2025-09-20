@@ -1,5 +1,6 @@
 -- Import every target from Agora/targets
 import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
+import Targets.canonicallyorderedaddMulPosone
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.padicintValuationPowone
 import Targets.padicintNormEqZpowNegValuationzero
