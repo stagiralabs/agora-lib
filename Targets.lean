@@ -1,3 +1,4 @@
 -- Import every target from Agora/targets
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
