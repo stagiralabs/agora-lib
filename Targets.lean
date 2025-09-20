@@ -1,4 +1,5 @@
 -- Import every target from Agora/targets
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.powerseriesInvonesubpowAddone
