@@ -6,3 +6,4 @@ import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setPairwisedisjointIffone
 import Targets.powerseriesInvonesubpowAddone
+import Targets.matrixDetUpdatecolEqZeroone
