@@ -2,6 +2,7 @@
 import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.matrixDetUpdatecolSumzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setPairwisedisjointIffone
 import Targets.padicintValuationPowone
