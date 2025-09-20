@@ -4,3 +4,4 @@ import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
+import Targets.matrixDetUpdatecolEqZeroone
