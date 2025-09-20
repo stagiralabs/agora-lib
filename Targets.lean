@@ -4,3 +4,4 @@ import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.derivNormOfrealCpowzero
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
+import Targets.padicintNormEqZpowNegValuationzero
