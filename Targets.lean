@@ -2,6 +2,7 @@
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.powerseriesOneSubPowAddMulInvonesubpowValEqOneSubPowzero
 import Targets.contmdiffmapCoeOnezero
+import Targets.setlikeCovbyIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.derivNormOfrealCpowzero
