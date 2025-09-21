@@ -1,6 +1,7 @@
 -- Import every target from Agora/targets
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
+import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
