@@ -10,6 +10,7 @@ import Targets.isthetaDerivOfrealCpowConstAttopone
 import Targets.matrixDetUpdatecolSumzero
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
+import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setPairwisedisjointIffone
 import Targets.derivNormOfrealCpowzero
 import Targets.setPairwisedisjointPairInsertzero
