@@ -2,4 +2,5 @@
 import Targets.setlikeCovbyIffzero
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.canonicallyorderedaddPowPoszero
+import Targets.derivNormOfrealCpowzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
