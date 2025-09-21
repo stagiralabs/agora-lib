@@ -2,6 +2,7 @@
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
+import Targets.matrixDetUpdatecolSumzero
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
 import Targets.derivNormOfrealCpowzero
