@@ -8,4 +8,5 @@ import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.setPairwisedisjointIffone
 import Targets.setPairwisedisjointPairInsertzero
 import Targets.setlikeIscoatomIffone
+import Targets.powerseriesInvonesubpowAddone
 import Targets.polynomialHilbertpolyEqZeroOfLeRootmultiplicityOneone
