@@ -8,3 +8,4 @@ import Targets.derivNormOfrealCpowzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.powerseriesInvonesubpowAddone
 import Targets.polynomialHilbertpolyEqZeroOfLeRootmultiplicityOneone
+import Targets.charactermoduleDualInjectiveIffSurjectivezero
