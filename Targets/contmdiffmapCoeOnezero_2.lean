@@ -1,5 +1,3 @@
-import Library
-
 -- Submitted at: 1758595744927/1000, Name: contmdiffmapCoeOnezero_2
 /-
 Copyright (c) 2020 Nicolò Cavalleri. All rights reserved.
@@ -22,33 +20,33 @@ open scoped Manifold ContDiff
 open TopologicalSpace
 
 variable {𝕜 : Type*} [NontriviallyNormedField 𝕜] {E : Type*} [NormedAddCommGroup E]
-  [NormedSpace 𝕜 E] {E' : Type*} [NormedAddCommGroup E'] [NormedSpace 𝕜 E'] {H : Type*}
-  [TopologicalSpace H] {I : ModelWithCorners 𝕜 E H} {H' : Type*} [TopologicalSpace H']
-  {I' : ModelWithCorners 𝕜 E' H'} {N : Type*} [TopologicalSpace N] [ChartedSpace H N]
-  {E'' : Type*} [NormedAddCommGroup E''] [NormedSpace 𝕜 E''] {H'' : Type*} [TopologicalSpace H'']
-  {I'' : ModelWithCorners 𝕜 E'' H''} {N' : Type*} [TopologicalSpace N'] [ChartedSpace H'' N']
-  {n : WithTop ℕ∞}
+[NormedSpace 𝕜 E] {E' : Type*} [NormedAddCommGroup E'] [NormedSpace 𝕜 E'] {H : Type*}
+[TopologicalSpace H] {I : ModelWithCorners 𝕜 E H} {H' : Type*} [TopologicalSpace H']
+{I' : ModelWithCorners 𝕜 E' H'} {N : Type*} [TopologicalSpace N] [ChartedSpace H N]
+{E'' : Type*} [NormedAddCommGroup E''] [NormedSpace 𝕜 E''] {H'' : Type*} [TopologicalSpace H'']
+{I'' : ModelWithCorners 𝕜 E'' H''} {N' : Type*} [TopologicalSpace N'] [ChartedSpace H'' N']
+{n : WithTop ℕ∞}
 
 namespace ContMDiffMap
 
 @[to_additive]
 protected instance instMul {G : Type*} [Mul G] [TopologicalSpace G] [ChartedSpace H' G]
-    [ContMDiffMul I' n G] : Mul C^n⟮I, N; I', G⟯ :=
-  ⟨fun f g => ⟨f * g, f.contMDiff.mul g.contMDiff⟩⟩
+[ContMDiffMul I' n G] : Mul C^n⟮I, N; I', G⟯ :=
+⟨fun f g => ⟨f * g, f.contMDiff.mul g.contMDiff⟩⟩
 
 @[to_additive (attr := simp)]
 theorem coe_mul {G : Type*} [Mul G] [TopologicalSpace G] [ChartedSpace H' G] [ContMDiffMul I' n G]
-    (f g : C^n⟮I, N; I', G⟯) : ⇑(f * g) = f * g :=
-  rfl
+(f g : C^n⟮I, N; I', G⟯) : ⇑(f * g) = f * g :=
+rfl
 
 @[to_additive (attr := simp)]
 theorem mul_comp {G : Type*} [Mul G] [TopologicalSpace G] [ChartedSpace H' G] [ContMDiffMul I' n G]
-    (f g : C^n⟮I'', N'; I', G⟯) (h : C^n⟮I, N; I'', N'⟯) : (f * g).comp h = f.comp h * g.comp h :=
-  rfl
+(f g : C^n⟮I'', N'; I', G⟯) (h : C^n⟮I, N; I'', N'⟯) : (f * g).comp h = f.comp h * g.comp h :=
+rfl
 
 @[to_additive]
 protected instance instOne {G : Type*} [One G] [TopologicalSpace G] [ChartedSpace H' G] :
-    One C^n⟮I, N; I', G⟯ :=
-  ⟨ContMDiffMap.const (1 : G)⟩
+One C^n⟮I, N; I', G⟯ :=
+⟨ContMDiffMap.const (1 : G)⟩
 
 @[to_additive (attr := by exact?
