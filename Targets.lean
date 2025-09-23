@@ -6,3 +6,4 @@ import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.setPairwisedisjointPairInsertzero
 import Targets.setlikeIscoatomIffone
+import Targets.charactermoduleDualInjectiveIffSurjectivezero
