@@ -2,6 +2,7 @@
 import Targets.matrixDetUpdatecolSumzero_2
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero_2
 import Targets.algebraEtaleIffExistsAlgequivProdzero_2
+import Targets.charactermoduleDualInjectiveIffSurjectivezero_2
 import Targets.padicintNormEqZpowNegValuationzero_2
 import Targets.listReduceoptionEqSingletonIffzero_2
 import Targets.contmdiffmapCoeOnezero_2
