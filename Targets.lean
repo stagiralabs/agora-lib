@@ -2,5 +2,6 @@
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.isthetaDerivOfrealCpowConstAttopone
 import Targets.derivNormOfrealCpowzero
+import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
 import Targets.padicintNormEqZpowNegValuationzero
