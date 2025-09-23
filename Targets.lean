@@ -3,6 +3,7 @@ import Targets.listReduceoptionEqSingletonIffzero
 import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
+import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.isthetaDerivOfrealCpowConstAttopone
 import Targets.matrixDetUpdatecolSumzero
 import Targets.zlatticeCovolumeTendstoCardLeDivone
