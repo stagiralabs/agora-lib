@@ -8,6 +8,7 @@ import Targets.listReduceoptionEqSingletonIffzero_2
 import Targets.contmdiffmapCoeOnezero_2
 import Targets.polynomialNatdegreeHilbertpolyOfNeZerozero_2
 import Targets.setPairwisedisjointIffone_2
+import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero_2
 import Targets.setlikeIscoatomIffone_2
 import Targets.canonicallyorderedaddMulPosone_2
 import Targets.canonicallyorderedaddPowPoszero_2
