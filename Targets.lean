@@ -5,6 +5,7 @@ import Targets.homologicalcomplexQuasiisoExtendmapIffzero
 import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
+import Targets.matrixDetUpdatecolSumzero
 import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.privateZlatticeCovolumeFrontierEquivfunzero
