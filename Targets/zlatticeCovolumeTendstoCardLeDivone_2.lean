@@ -1,5 +1,3 @@
-import Library
-
 -- Submitted at: 1758595873967/1000, Name: zlatticeCovolumeTendstoCardLeDivone_2
 /-
 Copyright (c) 2024 Xavier Roblot. All rights reserved.
@@ -74,90 +72,90 @@ variable (L : Submodule ℤ E) [DiscreteTopology L] [IsZLattice ℝ L]
 variable (μ : Measure E := by volume_tac) [Measure.IsAddHaarMeasure μ]
 
 theorem covolume_eq_measure_fundamentalDomain {F : Set E} (h : IsAddFundamentalDomain L F μ) :
-    covolume L μ = (μ F).toReal := by
-  have : MeasurableVAdd L E := (inferInstance : MeasurableVAdd L.toAddSubgroup E)
-  have : VAddInvariantMeasure L E μ := (inferInstance : VAddInvariantMeasure L.toAddSubgroup E μ)
-  exact congr_arg ENNReal.toReal (h.covolume_eq_volume μ)
+covolume L μ = (μ F).toReal := by
+have : MeasurableVAdd L E := (inferInstance : MeasurableVAdd L.toAddSubgroup E)
+have : VAddInvariantMeasure L E μ := (inferInstance : VAddInvariantMeasure L.toAddSubgroup E μ)
+exact congr_arg ENNReal.toReal (h.covolume_eq_volume μ)
 
 theorem covolume_ne_zero : covolume L μ ≠ 0 := by
-  rw [covolume_eq_measure_fundamentalDomain L μ (isAddFundamentalDomain (Free.chooseBasis ℤ L) μ),
-    ENNReal.toReal_ne_zero]
-  refine ⟨measure_fundamentalDomain_ne_zero _, ne_of_lt ?_⟩
-  exact Bornology.IsBounded.measure_lt_top (fundamentalDomain_isBounded _)
+rw [covolume_eq_measure_fundamentalDomain L μ (isAddFundamentalDomain (Free.chooseBasis ℤ L) μ),
+ENNReal.toReal_ne_zero]
+refine ⟨measure_fundamentalDomain_ne_zero _, ne_of_lt ?_⟩
+exact Bornology.IsBounded.measure_lt_top (fundamentalDomain_isBounded _)
 
 theorem covolume_pos : 0 < covolume L μ :=
-  lt_of_le_of_ne ENNReal.toReal_nonneg (covolume_ne_zero L μ).symm
+lt_of_le_of_ne ENNReal.toReal_nonneg (covolume_ne_zero L μ).symm
 
 theorem covolume_comap {F : Type*} [NormedAddCommGroup F] [NormedSpace ℝ F] [FiniteDimensional ℝ F]
-    [MeasurableSpace F] [BorelSpace F] (ν : Measure F := by volume_tac) [Measure.IsAddHaarMeasure ν]
-    {e : F ≃L[ℝ] E} (he : MeasurePreserving e ν μ) :
-    covolume (ZLattice.comap ℝ L e.toLinearMap) ν = covolume L μ := by
-  rw [covolume_eq_measure_fundamentalDomain _ _ (isAddFundamentalDomain (Free.chooseBasis ℤ L) μ),
-    covolume_eq_measure_fundamentalDomain _ _ ((isAddFundamentalDomain
-    ((Free.chooseBasis ℤ L).ofZLatticeComap ℝ L e.toLinearEquiv) ν)), ← he.measure_preimage
-    (fundamentalDomain_measurableSet _).nullMeasurableSet, ← e.image_symm_eq_preimage,
-    ← e.symm.coe_toLinearEquiv, map_fundamentalDomain]
-  congr!
-  ext; simp
+[MeasurableSpace F] [BorelSpace F] (ν : Measure F := by volume_tac) [Measure.IsAddHaarMeasure ν]
+{e : F ≃L[ℝ] E} (he : MeasurePreserving e ν μ) :
+covolume (ZLattice.comap ℝ L e.toLinearMap) ν = covolume L μ := by
+rw [covolume_eq_measure_fundamentalDomain _ _ (isAddFundamentalDomain (Free.chooseBasis ℤ L) μ),
+covolume_eq_measure_fundamentalDomain _ _ ((isAddFundamentalDomain
+((Free.chooseBasis ℤ L).ofZLatticeComap ℝ L e.toLinearEquiv) ν)), ← he.measure_preimage
+(fundamentalDomain_measurableSet _).nullMeasurableSet, ← e.image_symm_eq_preimage,
+← e.symm.coe_toLinearEquiv, map_fundamentalDomain]
+congr!
+ext; simp
 
 theorem covolume_eq_det_mul_measure {ι : Type*} [Fintype ι] [DecidableEq ι] (b : Basis ι ℤ L)
-    (b₀ : Basis ι ℝ E) :
-    covolume L μ = |b₀.det ((↑) ∘ b)| * (μ (fundamentalDomain b₀)).toReal := by
-  rw [covolume_eq_measure_fundamentalDomain L μ (isAddFundamentalDomain b μ),
-    measure_fundamentalDomain _ _ b₀,
-    measure_congr (fundamentalDomain_ae_parallelepiped b₀ μ), ENNReal.toReal_mul,
-    ENNReal.toReal_ofReal (by positivity)]
-  congr
-  ext
-  exact b.ofZLatticeBasis_apply ℝ L _
+(b₀ : Basis ι ℝ E) :
+covolume L μ = |b₀.det ((↑) ∘ b)| * (μ (fundamentalDomain b₀)).toReal := by
+rw [covolume_eq_measure_fundamentalDomain L μ (isAddFundamentalDomain b μ),
+measure_fundamentalDomain _ _ b₀,
+measure_congr (fundamentalDomain_ae_parallelepiped b₀ μ), ENNReal.toReal_mul,
+ENNReal.toReal_ofReal (by positivity)]
+congr
+ext
+exact b.ofZLatticeBasis_apply ℝ L _
 
 theorem covolume_eq_det {ι : Type*} [Fintype ι] [DecidableEq ι] (L : Submodule ℤ (ι → ℝ))
-    [DiscreteTopology L] [IsZLattice ℝ L] (b : Basis ι ℤ L) :
-    covolume L = |(Matrix.of ((↑) ∘ b)).det| := by
-  rw [covolume_eq_measure_fundamentalDomain L volume (isAddFundamentalDomain b volume),
-    volume_fundamentalDomain, ENNReal.toReal_ofReal (by positivity)]
-  congr
-  ext1
-  exact b.ofZLatticeBasis_apply ℝ L _
+[DiscreteTopology L] [IsZLattice ℝ L] (b : Basis ι ℤ L) :
+covolume L = |(Matrix.of ((↑) ∘ b)).det| := by
+rw [covolume_eq_measure_fundamentalDomain L volume (isAddFundamentalDomain b volume),
+volume_fundamentalDomain, ENNReal.toReal_ofReal (by positivity)]
+congr
+ext1
+exact b.ofZLatticeBasis_apply ℝ L _
 
 theorem covolume_eq_det_inv {ι : Type*} [Fintype ι] [DecidableEq ι] (L : Submodule ℤ (ι → ℝ))
-    [DiscreteTopology L] [IsZLattice ℝ L] (b : Basis ι ℤ L) :
-    covolume L = |(LinearEquiv.det (b.ofZLatticeBasis ℝ L).equivFun : ℝ)|⁻¹ := by
-  rw [covolume_eq_det L b, ← Pi.basisFun_det_apply, show (((↑) : L → _) ∘ ⇑b) =
-    (b.ofZLatticeBasis ℝ) by ext; simp, ← Basis.det_inv, ← abs_inv, Units.val_inv_eq_inv_val,
-    IsUnit.unit_spec, ← Basis.det_basis, LinearEquiv.coe_det]
-  rfl
+[DiscreteTopology L] [IsZLattice ℝ L] (b : Basis ι ℤ L) :
+covolume L = |(LinearEquiv.det (b.ofZLatticeBasis ℝ L).equivFun : ℝ)|⁻¹ := by
+rw [covolume_eq_det L b, ← Pi.basisFun_det_apply, show (((↑) : L → _) ∘ ⇑b) =
+(b.ofZLatticeBasis ℝ) by ext; simp, ← Basis.det_inv, ← abs_inv, Units.val_inv_eq_inv_val,
+IsUnit.unit_spec, ← Basis.det_basis, LinearEquiv.coe_det]
+rfl
 
 theorem volume_image_eq_volume_div_covolume {ι : Type*} [Fintype ι] [DecidableEq ι]
-    (L : Submodule ℤ (ι → ℝ)) [DiscreteTopology L] [IsZLattice ℝ L] (b : Basis ι ℤ L)
-    {s : Set (ι → ℝ)} :
-    volume ((b.ofZLatticeBasis ℝ L).equivFun '' s) = volume s / ENNReal.ofReal (covolume L) := by
-  rw [LinearEquiv.image_eq_preimage, Measure.addHaar_preimage_linearEquiv, LinearEquiv.symm_symm,
-    covolume_eq_det_inv L b, ENNReal.div_eq_inv_mul, ENNReal.ofReal_inv_of_pos
-    (abs_pos.mpr (LinearEquiv.det _).ne_zero), inv_inv, LinearEquiv.coe_det]
+(L : Submodule ℤ (ι → ℝ)) [DiscreteTopology L] [IsZLattice ℝ L] (b : Basis ι ℤ L)
+{s : Set (ι → ℝ)} :
+volume ((b.ofZLatticeBasis ℝ L).equivFun '' s) = volume s / ENNReal.ofReal (covolume L) := by
+rw [LinearEquiv.image_eq_preimage, Measure.addHaar_preimage_linearEquiv, LinearEquiv.symm_symm,
+covolume_eq_det_inv L b, ENNReal.div_eq_inv_mul, ENNReal.ofReal_inv_of_pos
+(abs_pos.mpr (LinearEquiv.det _).ne_zero), inv_inv, LinearEquiv.coe_det]
 
 /-- A more general version of `ZLattice.volume_image_eq_volume_div_covolume`;
 see the `Naming conventions` section in the introduction. -/
 theorem volume_image_eq_volume_div_covolume' {E : Type*} [NormedAddCommGroup E]
-    [InnerProductSpace ℝ E] [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
-    (L : Submodule ℤ E) [DiscreteTopology L] [IsZLattice ℝ L] {ι : Type*} [Fintype ι]
-    (b : Basis ι ℤ L) {s : Set E} (hs : NullMeasurableSet s) :
-    volume ((b.ofZLatticeBasis ℝ).equivFun '' s) = volume s / ENNReal.ofReal (covolume L) := by
-  classical
-  let e : Fin (finrank ℝ E) ≃ ι :=
-    Fintype.equivOfCardEq (by rw [Fintype.card_fin, finrank_eq_card_basis (b.ofZLatticeBasis ℝ)])
-  let f := (EuclideanSpace.equiv ι ℝ).symm.trans
-    ((stdOrthonormalBasis ℝ E).reindex e).repr.toContinuousLinearEquiv.symm
-  have hf : MeasurePreserving f :=
-    ((stdOrthonormalBasis ℝ E).reindex e).measurePreserving_repr_symm.comp
-      (EuclideanSpace.volume_preserving_measurableEquiv ι).symm
-  rw [← hf.measure_preimage hs, ← (covolume_comap L volume volume hf),
-    ← volume_image_eq_volume_div_covolume (ZLattice.comap ℝ L f.toLinearMap)
-    (b.ofZLatticeComap ℝ L f.toLinearEquiv), Basis.ofZLatticeBasis_comap,
-    ← f.image_symm_eq_preimage, ← Set.image_comp]
-  simp only [Basis.equivFun_apply, ContinuousLinearEquiv.symm_toLinearEquiv, Basis.map_equivFun,
-    LinearEquiv.symm_symm, Function.comp_apply, LinearEquiv.trans_apply,
-    ContinuousLinearEquiv.coe_toLinearEquiv, ContinuousLinearEquiv.apply_symm_apply]
+[InnerProductSpace ℝ E] [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
+(L : Submodule ℤ E) [DiscreteTopology L] [IsZLattice ℝ L] {ι : Type*} [Fintype ι]
+(b : Basis ι ℤ L) {s : Set E} (hs : NullMeasurableSet s) :
+volume ((b.ofZLatticeBasis ℝ).equivFun '' s) = volume s / ENNReal.ofReal (covolume L) := by
+classical
+let e : Fin (finrank ℝ E) ≃ ι :=
+Fintype.equivOfCardEq (by rw [Fintype.card_fin, finrank_eq_card_basis (b.ofZLatticeBasis ℝ)])
+let f := (EuclideanSpace.equiv ι ℝ).symm.trans
+((stdOrthonormalBasis ℝ E).reindex e).repr.toContinuousLinearEquiv.symm
+have hf : MeasurePreserving f :=
+((stdOrthonormalBasis ℝ E).reindex e).measurePreserving_repr_symm.comp
+(EuclideanSpace.volume_preserving_measurableEquiv ι).symm
+rw [← hf.measure_preimage hs, ← (covolume_comap L volume volume hf),
+← volume_image_eq_volume_div_covolume (ZLattice.comap ℝ L f.toLinearMap)
+(b.ofZLatticeComap ℝ L f.toLinearEquiv), Basis.ofZLatticeBasis_comap,
+← f.image_symm_eq_preimage, ← Set.image_comp]
+simp only [Basis.equivFun_apply, ContinuousLinearEquiv.symm_toLinearEquiv, Basis.map_equivFun,
+LinearEquiv.symm_symm, Function.comp_apply, LinearEquiv.trans_apply,
+ContinuousLinearEquiv.coe_toLinearEquiv, ContinuousLinearEquiv.apply_symm_apply]
 
 end Basic
 
@@ -174,41 +172,41 @@ variable {ι : Type*} [Fintype ι] (b : Basis ι ℤ L)
 /-- A version of `ZLattice.covolume.tendsto_card_div_pow` for the general case;
 see the `Naming convention` section in the introduction. -/
 theorem tendsto_card_div_pow'' [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
-    {s : Set E} (hs₁ : IsBounded s) (hs₂ : MeasurableSet s)
-    (hs₃ : volume (frontier ((b.ofZLatticeBasis ℝ).equivFun '' s)) = 0):
-    Tendsto (fun n : ℕ ↦ (Nat.card (s ∩ (n : ℝ)⁻¹ • L : Set E) : ℝ) / n ^ card ι)
-      atTop (𝓝 (volume ((b.ofZLatticeBasis ℝ).equivFun '' s)).toReal) := by
-  refine Tendsto.congr' ?_
-    (tendsto_card_div_pow_atTop_volume ((b.ofZLatticeBasis ℝ).equivFun '' s) ?_ ?_ hs₃)
-  · filter_upwards [eventually_gt_atTop 0] with n hn
-    congr
-    refine Nat.card_congr <| ((b.ofZLatticeBasis ℝ).equivFun.toEquiv.subtypeEquiv fun x ↦ ?_).symm
-    simp_rw [Set.mem_inter_iff, ← b.ofZLatticeBasis_span ℝ, LinearEquiv.coe_toEquiv,
-      Basis.equivFun_apply, Set.mem_image, DFunLike.coe_fn_eq, EmbeddingLike.apply_eq_iff_eq,
-      exists_eq_right, and_congr_right_iff, Set.mem_inv_smul_set_iff₀
-      (mod_cast hn.ne' : (n : ℝ) ≠ 0), ← Finsupp.coe_smul, ← LinearEquiv.map_smul, SetLike.mem_coe,
-      Basis.mem_span_iff_repr_mem, Pi.basisFun_repr, implies_true]
-  · rw [← NormedSpace.isVonNBounded_iff ℝ] at hs₁ ⊢
-    exact Bornology.IsVonNBounded.image hs₁ ((b.ofZLatticeBasis ℝ).equivFunL : E →L[ℝ] ι → ℝ)
-  · exact (b.ofZLatticeBasis ℝ).equivFunL.toHomeomorph.toMeasurableEquiv.measurableSet_image.mpr hs₂
+{s : Set E} (hs₁ : IsBounded s) (hs₂ : MeasurableSet s)
+(hs₃ : volume (frontier ((b.ofZLatticeBasis ℝ).equivFun '' s)) = 0):
+Tendsto (fun n : ℕ ↦ (Nat.card (s ∩ (n : ℝ)⁻¹ • L : Set E) : ℝ) / n ^ card ι)
+atTop (𝓝 (volume ((b.ofZLatticeBasis ℝ).equivFun '' s)).toReal) := by
+refine Tendsto.congr' ?_
+(tendsto_card_div_pow_atTop_volume ((b.ofZLatticeBasis ℝ).equivFun '' s) ?_ ?_ hs₃)
+· filter_upwards [eventually_gt_atTop 0] with n hn
+congr
+refine Nat.card_congr <| ((b.ofZLatticeBasis ℝ).equivFun.toEquiv.subtypeEquiv fun x ↦ ?_).symm
+simp_rw [Set.mem_inter_iff, ← b.ofZLatticeBasis_span ℝ, LinearEquiv.coe_toEquiv,
+Basis.equivFun_apply, Set.mem_image, DFunLike.coe_fn_eq, EmbeddingLike.apply_eq_iff_eq,
+exists_eq_right, and_congr_right_iff, Set.mem_inv_smul_set_iff₀
+(mod_cast hn.ne' : (n : ℝ) ≠ 0), ← Finsupp.coe_smul, ← LinearEquiv.map_smul, SetLike.mem_coe,
+Basis.mem_span_iff_repr_mem, Pi.basisFun_repr, implies_true]
+· rw [← NormedSpace.isVonNBounded_iff ℝ] at hs₁ ⊢
+exact Bornology.IsVonNBounded.image hs₁ ((b.ofZLatticeBasis ℝ).equivFunL : E →L[ℝ] ι → ℝ)
+· exact (b.ofZLatticeBasis ℝ).equivFunL.toHomeomorph.toMeasurableEquiv.measurableSet_image.mpr hs₂
 
 private theorem tendsto_card_le_div''_aux {X : Set E} (hX : ∀ ⦃x⦄ ⦃r:ℝ⦄, x ∈ X → 0 < r → r • x ∈ X)
-    {F : E → ℝ} (hF₁ : ∀ x ⦃r : ℝ⦄, 0 ≤ r → F (r • x) = r ^ card ι * (F x)) {c : ℝ} (hc : 0 < c) :
-    c • {x ∈ X | F x ≤ 1} = {x ∈ X | F x ≤ c ^ card ι} := by
-  ext x
-  simp_rw [Set.mem_smul_set_iff_inv_smul_mem₀ hc.ne', Set.mem_setOf_eq, hF₁ _
-    (inv_pos_of_pos hc).le, inv_pow, inv_mul_le_iff₀ (pow_pos hc _), mul_one, and_congr_left_iff]
-  exact fun _ ↦ ⟨fun h ↦ (smul_inv_smul₀ hc.ne' x) ▸ hX h hc, fun h ↦ hX h (inv_pos_of_pos hc)⟩
+{F : E → ℝ} (hF₁ : ∀ x ⦃r : ℝ⦄, 0 ≤ r → F (r • x) = r ^ card ι * (F x)) {c : ℝ} (hc : 0 < c) :
+c • {x ∈ X | F x ≤ 1} = {x ∈ X | F x ≤ c ^ card ι} := by
+ext x
+simp_rw [Set.mem_smul_set_iff_inv_smul_mem₀ hc.ne', Set.mem_setOf_eq, hF₁ _
+(inv_pos_of_pos hc).le, inv_pow, inv_mul_le_iff₀ (pow_pos hc _), mul_one, and_congr_left_iff]
+exact fun _ ↦ ⟨fun h ↦ (smul_inv_smul₀ hc.ne' x) ▸ hX h hc, fun h ↦ hX h (inv_pos_of_pos hc)⟩
 
 /-- A version of `ZLattice.covolume.tendsto_card_le_div` for the general case;
 see the `Naming conventions` section in the introduction. -/
 theorem tendsto_card_le_div'' [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E]
-    [Nonempty ι] {X : Set E} (hX : ∀ ⦃x⦄ ⦃r : ℝ⦄, x ∈ X → 0 < r → r • x ∈ X)
-    {F : E → ℝ} (h₁ : ∀ x ⦃r : ℝ⦄, 0 ≤ r →  F (r • x) = r ^ card ι * (F x))
-    (h₂ : IsBounded {x ∈ X | F x ≤ 1}) (h₃ : MeasurableSet {x ∈ X | F x ≤ 1})
-    (h₄ : volume (frontier ((b.ofZLatticeBasis ℝ L).equivFun '' {x | x ∈ X ∧ F x ≤ 1})) = 0) :
-    Tendsto (fun c : ℝ ↦
-      Nat.card ({x ∈ X | F x ≤ c} ∩ L : Set E) / (c : ℝ))
-        atTop (𝓝 (volume ((b.ofZLatticeBasis ℝ).equivFun '' {x ∈ X | F x ≤ 1})).toReal) := by
+[Nonempty ι] {X : Set E} (hX : ∀ ⦃x⦄ ⦃r : ℝ⦄, x ∈ X → 0 < r → r • x ∈ X)
+{F : E → ℝ} (h₁ : ∀ x ⦃r : ℝ⦄, 0 ≤ r →  F (r • x) = r ^ card ι * (F x))
+(h₂ : IsBounded {x ∈ X | F x ≤ 1}) (h₃ : MeasurableSet {x ∈ X | F x ≤ 1})
+(h₄ : volume (frontier ((b.ofZLatticeBasis ℝ L).equivFun '' {x | x ∈ X ∧ F x ≤ 1})) = 0) :
+Tendsto (fun c : ℝ ↦
+Nat.card ({x ∈ X | F x ≤ c} ∩ L : Set E) / (c : ℝ))
+atTop (𝓝 (volume ((b.ofZLatticeBasis ℝ).equivFun '' {x ∈ X | F x ≤ 1})).toReal) := by
 
-  exact?
+exact?
