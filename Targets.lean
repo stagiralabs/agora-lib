@@ -4,6 +4,7 @@ import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
+import Targets.setlikeIscoatomIffone
 import Targets.powerseriesInvonesubpowAddone
 import Targets.padicintValuationPowone
 import Targets.charactermoduleDualInjectiveIffSurjectivezero
