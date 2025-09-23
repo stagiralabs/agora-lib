@@ -4,6 +4,7 @@ import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.isthetaDerivOfrealCpowConstAttopone
+import Targets.matrixDetUpdatecolSumzero
 import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
