@@ -1,4 +1,5 @@
 -- Import every target from Agora/targets
+import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.setPairwisedisjointPairInsertzero
 import Targets.setlikeIscoatomIffone
