@@ -5,6 +5,7 @@ import Targets.canonicallyorderedaddMulPosone
 import Targets.isthetaDerivOfrealCpowConstAttopone
 import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
+import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.derivNormOfrealCpowzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.setlikeIscoatomIffone
