@@ -6,6 +6,7 @@ import Targets.derivNormOfrealCpowzero_2
 import Targets.homologicalcomplexQuasiisoExtendmapIffzero
 import Targets.contmdiffmapCoeOnezero
 import Targets.setlikeCovbyIffzero
+import Targets.homologicalcomplexQuasiisoExtendmapIffzero_2
 import Targets.canonicallyorderedaddMulPosone
 import Targets.algebraEtaleIffExistsAlgequivProdzero
 import Targets.isthetaDerivOfrealCpowConstAttopone
