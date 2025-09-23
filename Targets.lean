@@ -1,6 +1,7 @@
 -- Import every target from Agora/targets
 import Targets.listReduceoptionEqSingletonIffzero
 import Targets.contmdiffmapCoeOnezero
+import Targets.setlikeCovbyIffzero
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.powerseriesInvonesubpowAddone
