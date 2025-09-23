@@ -4,3 +4,4 @@ import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
 import Targets.isapproximatesubgroupCardMulSelfLeone
 import Targets.powerseriesInvonesubpowAddone
 import Targets.padicintValuationPowone
+import Targets.charactermoduleDualInjectiveIffSurjectivezero
