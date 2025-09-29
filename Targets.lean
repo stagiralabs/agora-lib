@@ -7,6 +7,7 @@ import Targets.setlikeCovbyIffzero
 import Targets.canonicallyorderedaddMulPosone
 import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.isapproximatesubgroupPowInterPowCovbysmulSqInterSqzero
+import Targets.powerseriesInvonesubpowAddone
 import Targets.padicintValuationPowone
 import Targets.matrixDetUpdatecolEqZeroone
 import Targets.polynomialNatdegreeHilbertpolyOfNeZerozero
