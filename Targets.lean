@@ -1,5 +1,6 @@
 -- Import every target from Agora/targets
 import Targets.listReduceoptionEqSingletonIffzero
+import Targets.setlikeCovbyIffzero
 import Targets.zlatticeCovolumeTendstoCardLeDivone
 import Targets.canonicallyorderedaddPowPoszero
 import Targets.strictconvexspaceOfStrictconvexUnitclosedballzero
